@@ -22,7 +22,7 @@ public class Config {
     protected boolean animateIndicators = true;
     protected int slideChangeInterval = 0;
     protected int emptyView = NOT_SELECTED;
-    protected int indicatorBackGroundColor = Color.WHITE;
+    protected int indicatorBackGroundColor = Color.TRANSPARENT;
 
     private Config() {
 
