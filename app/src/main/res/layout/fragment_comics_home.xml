@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nirhart.parallaxscroll.views.ParallaxScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_parallax_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <!--BannerSlider-->
+    <RelativeLayout
+        android:id="@+id/rl_banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="290dp">
+
+        <com.padc.bannerslider.ss.com.bannerslider.Slider
+            android:id="@+id/bs_banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:slider_animateIndicators="true"
+            app:slider_interval="5000"
+            app:slider_defaultBanner="1"
+            app:slider_loopSlides="true"
+            app:slider_indicatorSize="12dp"
+            app:indicator_background="@android:color/white"
+            app:slider_selectedSlideIndicator="@drawable/indicator_oblique_square_black"
+            app:slider_unselectedSlideIndicator="@drawable/indicator_oblique_square_clear"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_banner_container"
+        android:padding="@dimen/margin_small"
+        android:background="@color/bg_app"
+        android:paddingTop="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/tv_new_released"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW THIS WEEK (40)"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"/>
+        
+        <com.github.florent37.shapeofview.shapes.DiagonalView
+            android:id="@+id/v_first_block"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_toRightOf="@id/tv_new_released"
+            android:layout_marginLeft="@dimen/margin_medium_3"
+            >
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:background="@color/divider"/>
+
+        </com.github.florent37.shapeofview.shapes.DiagonalView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_new_released"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/v_first_block"
+            android:layout_marginTop="@dimen/margin_medium"
+            />
+
+    </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</com.nirhart.parallaxscroll.views.ParallaxScrollView>

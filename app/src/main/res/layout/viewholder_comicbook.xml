@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/custom_comic_book_card_width"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/ripple_white">
+
+    <ImageView
+        android:id="@+id/iv_comic_hero"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/comic_book_height"
+        android:src="@drawable/comics1"
+        />
+    <TextView
+        android:id="@+id/tv_comic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comics One Episode 1"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_below="@+id/iv_comic_hero"
+        android:textColor="@color/primary_text"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_alignLeft="@+id/iv_comic_hero"/>
+
+    <TextView
+        android:id="@+id/tv_comic_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nov 27,2017"
+        android:layout_below="@+id/tv_comic_title"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/secondary_text"
+        android:layout_alignLeft="@+id/tv_comic_title"/>
+
+
+</RelativeLayout>
