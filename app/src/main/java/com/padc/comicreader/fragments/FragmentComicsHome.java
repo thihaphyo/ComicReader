@@ -1,5 +1,6 @@
 package com.padc.comicreader.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.padc.bannerslider.ss.com.bannerslider.Slider;
 import com.padc.comicreader.R;
+import com.padc.comicreader.activities.ComicDetailActivity;
 import com.padc.comicreader.adapters.HomeSliderAdpater;
 import com.padc.comicreader.adapters.NewComicsRecyclerViewAdapter;
 import com.padc.comicreader.delegates.ComicListDelegate;
@@ -47,6 +49,14 @@ public class FragmentComicsHome extends BaseFragment implements ComicListDelegat
         rvNewReleased.setAdapter(new NewComicsRecyclerViewAdapter(this));
         rvNewReleased.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
 
+        RecyclerView rvFree = view.findViewById(R.id.rv_free);
+        rvFree.setAdapter(new NewComicsRecyclerViewAdapter(this));
+        rvFree.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+
+        RecyclerView rvPopular = view.findViewById(R.id.rvpopular);
+        rvPopular.setAdapter(new NewComicsRecyclerViewAdapter(this));
+        rvPopular.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+
 
     }
 
@@ -58,7 +68,8 @@ public class FragmentComicsHome extends BaseFragment implements ComicListDelegat
     @Override
     public void onComicCardTapped() {
 
-        Toast.makeText(getContext(),"You Tapped me",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getContext(), ComicDetailActivity.class);
+        startActivity(intent);
 
     }
 }

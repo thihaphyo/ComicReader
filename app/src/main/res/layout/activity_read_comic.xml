@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="276dp"
+                android:background="@color/button_color"
+                android:text="Read Now"
+                android:textAllCaps="false"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/text_regular_2x"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hero"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/placeholder_comics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/comics1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#D9000000" />
+
+                <ImageView
+                    android:layout_width="145dp"
+                    android:layout_height="208dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/comics1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button">
+
+                <TextView
+                    android:id="@+id/tv_comic_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Comic1 Episode 1"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_3x" />
+
+                <View
+                    android:id="@+id/v_separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_comic_title"
+                    android:layout_marginLeft="@dimen/margin_medium_2"
+                    android:layout_marginRight="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/tv_story_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/v_separator"
+                    android:layout_below="@id/v_separator"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:text="The Story"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_story_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_story_head"
+                    android:layout_alignRight="@id/v_separator"
+                    android:layout_below="@+id/tv_story_head"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="Extremis is an advanced form of genetic manipulation created by Maya Hansen and Aldrich Killian, using nanotechnology. It grants the human body the ability to heal and regenerate from physical damages, deformities and even psychological damages. This also includes the regrowth of severed limbs in a very short timespan, various physical enhancements as well as an exothermic ability.Extremis was created by Maya Hansen in 1999, with Tony Stark providing additional aid through a formula he deduced to help reduce the volatility while intoxicated. Maya and Aldrich Killian upgraded it thanks to Advanced Idea Mechanics providing funding for it to begin experimental testing. A.I.M. recruited amputees and other disabled people as test subjects, most notably the victims of military ops. Extremis cured their disabilities after which they were convinced to work for A.I.M. as assassins and soldiers. Near the end most if not all of the Extremis Soldiers were killed by the combined forces of Tony Stark, James Rhodes, and J.A.R.V.I.S."
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_2x" />
+
+                <TextView
+                    android:id="@+id/tv_cover_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_story_body"
+                    android:layout_below="@id/tv_story_body"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Cover"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_cover_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_cover_head"
+                    android:layout_below="@id/tv_cover_head"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="InkerLJoe Quinones"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_interior_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_cover_body"
+                    android:layout_below="@id/tv_cover_body"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Interior"
+                    android:textColor="@color/primary_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_letterer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_interior_head"
+                    android:layout_below="@id/tv_interior_head"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Letterer"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_inker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_letterer"
+                    android:layout_below="@id/tv_letterer"
+                    android:text="Inker"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_editor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_inker"
+                    android:layout_below="@id/tv_inker"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Editor"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_colorist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_editor"
+                    android:layout_below="@id/tv_editor"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Interior"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_colorist"
+                    android:layout_below="@id/tv_colorist"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="Writer"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular" />
+
+                <TextView
+                    android:id="@+id/tv_published_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_writer"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:text="Published:Nov 29,2017"
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_more"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_published_date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@color/colorPrimaryDark"
+                    android:padding="@dimen/margin_small"
+                    android:text="More In This Series"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_regular"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

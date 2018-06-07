@@ -11,4 +11,6 @@
     <color name="indicator_selected_color">#000000</color>
     <color name="indicator_deselected_color">#00FFFFFF</color>
     <color name="ripple_color_white">#FFFFFF</color>
+    <color name="button_color">#d30000</color>
+    <color name="text_white">#FFFFFF</color>
 </resources>
