@@ -232,6 +232,7 @@
                     android:layout_margin="@dimen/margin_medium"
                     android:text="Published:Nov 29,2017"
                     android:textColor="@color/primary_text"
+                    android:layout_alignLeft="@+id/tv_colorist"
                     android:textSize="@dimen/text_regular_2x"
                     android:textStyle="bold" />
 

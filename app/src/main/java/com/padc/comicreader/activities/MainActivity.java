@@ -41,7 +41,7 @@ public class MainActivity extends BaseActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_camera);
+        navigationView.setCheckedItem(R.id.nav_home);
 
         Fragment homeFragment = new FragmentComicsHome();
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -90,7 +90,7 @@ public class MainActivity extends BaseActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
 
             Fragment homeFragment = new FragmentComicsHome();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -99,15 +99,15 @@ public class MainActivity extends BaseActivity
             fragmentTransaction.commit();
 
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_read_list) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_search) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_library) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_setting) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_about) {
 
         }
 
